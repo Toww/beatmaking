@@ -4,14 +4,156 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beatmaking project</title>
-    <!-- Tailwind CSS -->
+    <!-- Google Font -->
     <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <head>
+        <h1>
+          Make a beat !
+        </h1>
+        <p>
+          Use the grid below to make a pattern, you can switch tempo too!
+        </p>
+      </head>
+      <main>
+        <!-- Sequencer -->
+        <div class="sequencer">
+          <!-- Controls -->
+          <div class="controls">
+            <button class="play">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+            <div class="tempo">
+              <p><span class="tempo-val">120</span>bpm</p>
+              <input
+                type="range"
+                class="tempo-slider"
+                min="20"
+                max="200"
+                value="120"
+              />
+            </div>
+          </div>
 
+          <!-- Pattern area -->
+          <div class="patterns">
+            <h2 class="sample-name">Open Hat</h2>
+            <div class="box open-hat-box b0"><span class="mobile-num">1</span></div>
+            <div class="box open-hat-box b1"><span class="mobile-num">2</span></div>
+            <div class="box open-hat-box b2"><span class="mobile-num">3</span></div>
+            <div class="box open-hat-box b3"><span class="mobile-num">4</span></div>
+            <div class="box open-hat-box b4"><span class="mobile-num">5</span></div>
+            <div class="box open-hat-box b5"><span class="mobile-num">6</span></div>
+            <div class="box open-hat-box b6"><span class="mobile-num">7</span></div>
+            <div class="box open-hat-box b7"><span class="mobile-num">8</span></div>
+            <div class="box open-hat-box b8"><span class="mobile-num">9</span></div>
+            <div class="box open-hat-box b9"><span class="mobile-num">10</span></div>
+            <div class="box open-hat-box b10"><span class="mobile-num">11</span></div>
+            <div class="box open-hat-box b11"><span class="mobile-num">12</span></div>
+            <div class="box open-hat-box b12"><span class="mobile-num">13</span></div>
+            <div class="box open-hat-box b13"><span class="mobile-num">14</span></div>
+            <div class="box open-hat-box b14"><span class="mobile-num">15</span></div>
+            <div class="box open-hat-box b15"><span class="mobile-num">16</span></div>
+
+            <h2 class="sample-name">Closed Hat</h2>
+            <div class="box closed-hat-box b0"><span class="mobile-num">1</span></div>
+            <div class="box closed-hat-box b1"><span class="mobile-num">2</span></div>
+            <div class="box closed-hat-box b2"><span class="mobile-num">3</span></div>
+            <div class="box closed-hat-box b3"><span class="mobile-num">4</span></div>
+            <div class="box closed-hat-box b4"><span class="mobile-num">5</span></div>
+            <div class="box closed-hat-box b5"><span class="mobile-num">6</span></div>
+            <div class="box closed-hat-box b6"><span class="mobile-num">7</span></div>
+            <div class="box closed-hat-box b7"><span class="mobile-num">8</span></div>
+            <div class="box closed-hat-box b8"><span class="mobile-num">9</span></div>
+            <div class="box closed-hat-box b9"><span class="mobile-num">10</span></div>
+            <div class="box closed-hat-box b10"><span class="mobile-num">11</span></div>
+            <div class="box closed-hat-box b11"><span class="mobile-num">12</span></div>
+            <div class="box closed-hat-box b12"><span class="mobile-num">13</span></div>
+            <div class="box closed-hat-box b13"><span class="mobile-num">14</span></div>
+            <div class="box closed-hat-box b14"><span class="mobile-num">15</span></div>
+            <div class="box closed-hat-box b15"><span class="mobile-num">16</span></div>
+
+            <h2 class="sample-name">Clap</h2>
+            <div class="box clap-box b0"><span class="mobile-num">1</span></div>
+            <div class="box clap-box b1"><span class="mobile-num">2</span></div>
+            <div class="box clap-box b2"><span class="mobile-num">3</span></div>
+            <div class="box clap-box b3"><span class="mobile-num">4</span></div>
+            <div class="box clap-box b4"><span class="mobile-num">5</span></div>
+            <div class="box clap-box b5"><span class="mobile-num">6</span></div>
+            <div class="box clap-box b6"><span class="mobile-num">7</span></div>
+            <div class="box clap-box b7"><span class="mobile-num">8</span></div>
+            <div class="box clap-box b8"><span class="mobile-num">9</span></div>
+            <div class="box clap-box b9"><span class="mobile-num">10</span></div>
+            <div class="box clap-box b10"><span class="mobile-num">11</span></div>
+            <div class="box clap-box b11"><span class="mobile-num">12</span></div>
+            <div class="box clap-box b12"><span class="mobile-num">13</span></div>
+            <div class="box clap-box b13"><span class="mobile-num">14</span></div>
+            <div class="box clap-box b14"><span class="mobile-num">15</span></div>
+            <div class="box clap-box b15"><span class="mobile-num">16</span></div>
+
+            <h2 class="sample-name">Kick</h2>
+            <div class="box kick-box b0"><span class="mobile-num">1</span></div>
+            <div class="box kick-box b1"><span class="mobile-num">2</span></div>
+            <div class="box kick-box b2"><span class="mobile-num">3</span></div>
+            <div class="box kick-box b3"><span class="mobile-num">4</span></div>
+            <div class="box kick-box b4"><span class="mobile-num">5</span></div>
+            <div class="box kick-box b5"><span class="mobile-num">6</span></div>
+            <div class="box kick-box b6"><span class="mobile-num">7</span></div>
+            <div class="box kick-box b7"><span class="mobile-num">8</span></div>
+            <div class="box kick-box b8"><span class="mobile-num">9</span></div>
+            <div class="box kick-box b9"><span class="mobile-num">10</span></div>
+            <div class="box kick-box b10"><span class="mobile-num">11</span></div>
+            <div class="box kick-box b11"><span class="mobile-num">12</span></div>
+            <div class="box kick-box b12"><span class="mobile-num">13</span></div>
+            <div class="box kick-box b13"><span class="mobile-num">14</span></div>
+            <div class="box kick-box b14"><span class="mobile-num">15</span></div>
+            <div class="box kick-box b15"><span class="mobile-num">16</span></div>
+
+            <div class="bar-num"></div>
+            <div class="bar-num">1</div>
+            <div class="bar-num">2</div>
+            <div class="bar-num">3</div>
+            <div class="bar-num">4</div>
+            <div class="bar-num">5</div>
+            <div class="bar-num">6</div>
+            <div class="bar-num">7</div>
+            <div class="bar-num">8</div>
+            <div class="bar-num">9</div>
+            <div class="bar-num">10</div>
+            <div class="bar-num">11</div>
+            <div class="bar-num">12</div>
+            <div class="bar-num">13</div>
+            <div class="bar-num">14</div>
+            <div class="bar-num">15</div>
+            <div class="bar-num">16</div>
+          </div>
+
+          <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
+          <audio class="clap-sound" src="./sounds/snare-acoustic01.wav"></audio>
+          <audio
+            class="open-hihat-sound"
+            src="./sounds/hihat-acoustic01.wav"
+          ></audio>
+          <audio
+            class="closed-hihat-sound"
+            src="./sounds/hihat-acoustic01.wav"
+          ></audio>
+        </div>
+      </main>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
