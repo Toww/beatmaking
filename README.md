@@ -1,4 +1,4 @@
-# Beatmaking project
+# Step sequencer
 
 A simple beatmaking Vanilla JS app, have fun 😊🎵 !
 
