@@ -147,11 +147,24 @@ main {
 }
 
 .msr {
+  
   color: rgba(255, 255, 255, 0.9);
 }
 
 .mobile-num {
   display: none;
+}
+
+/* ----- OTHER -----  */
+
+.note {
+  text-align:center;
+  font-size:0.75em;
+}
+
+.note p {
+  padding:0;
+  margin:0;
 }
 
 /* ----- RESPONSIVE FEATURES ----- */
@@ -179,6 +192,10 @@ main {
   .bar-num {
     display: none;
   }
+
+  .note p {
+  margin:2em;
+}
 }
 
 /* ----- Animation ----- */
