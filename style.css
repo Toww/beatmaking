@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
 i,
 svg {
   pointer-events: none;
@@ -13,17 +19,6 @@ body {
   font-family: "Recursive", Arial, Helvetica, sans-serif;
   background-color: #4a5568;
   color: white;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 4rem;
 }
 
 h1 {
@@ -38,7 +33,18 @@ h2,
 }
 
 p {
-  margin: 1rem 0rem;
+  margin: 2rem 0rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem;
 }
 
 .sequencer,
@@ -76,7 +82,12 @@ main {
   margin-right: 1rem;
 }
 
-/*  Slider */
+.controls input {
+  flex: 1;
+}
+
+/*  ----- SLIDER ----- */
+
 .tempo-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -105,12 +116,14 @@ main {
   cursor: pointer;
 }
 
+/* ----- SEQUENCER ----- */
+
 .patterns {
   display: grid;
   grid-template-columns: 130px repeat(16, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 0.2rem;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
 }
 
 .sample-name {
@@ -123,15 +136,25 @@ main {
   cursor: pointer;
 }
 
+.box.active {
+  background-color: #f6ad55;
+}
+
 .bar-num {
   font-size: 0.75rem;
   padding: 2px;
   color: rgba(255, 255, 255, 0.6);
 }
 
+.msr {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .mobile-num {
   display: none;
 }
+
+/* ----- RESPONSIVE FEATURES ----- */
 
 @media only screen and (max-width: 768px) {
   .patterns {
@@ -155,5 +178,28 @@ main {
 
   .bar-num {
     display: none;
+  }
+}
+
+/* ----- Animation ----- */
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  to {
+    transform: scale(1.04);
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+@keyframes playTrackActive {
+  from {
+    transform: scale(1);
+    background: #f6ad55
+  }
+  to {
+    transform: scale(1.04);
+    background: #feebc8;
   }
 }
